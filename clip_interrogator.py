@@ -11,7 +11,7 @@ import torch
 import torchvision.transforms as T
 import torchvision.transforms.functional as TF
 
-from IPython.display import display
+#from IPython.display import display
 from PIL import Image
 from torch import nn
 from torch.nn import functional as F
@@ -99,7 +99,7 @@ def interrogate(image, models):
 
         del model
         gc.collect()
-    display(pd.DataFrame(table, columns=["Model", "Medium", "Artist", "Trending", "Movement", "Flavors"]))
+    #display(pd.DataFrame(table, columns=["Model", "Medium", "Artist", "Trending", "Movement", "Flavors"]))
 
     flaves = ', '.join([f"{x[0]}" for x in bests[4]])
     medium = bests[0][0][0]
@@ -165,6 +165,6 @@ else:
 
 thumb = image.copy()
 thumb.thumbnail([blip_image_eval_size, blip_image_eval_size])
-display(thumb)
+#display(thumb)
 
 interrogate(image, models=models)
