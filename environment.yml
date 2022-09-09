@@ -1,0 +1,29 @@
+name: clip
+channels:
+  - pytorch
+  - defaults
+dependencies:
+  - python #=3.10.4
+  - pip
+  #- cudatoolkit=11.3
+  - pytorch=1.11.0
+  #- torchvision=0.12.0
+  #- numpy=1.19.2
+  - pip:
+    - ftfy
+    - regex
+    - tqdm
+    - transformers==4.15.0
+    - timm==0.4.12
+    #- fairscale==0.4.4\n",
+    - -e git+https://github.com/openai/CLIP.git@main#egg=CLIP
+    #- -e https://github.com/pharmapsychotic/clip-interrogator.git
+    #- -e git+https://github.com/salesforce/BLIP@main#egg=BLIP
+    - clip
+    #- gc
+    - pandas
+    - requests
+    - torch
+    - torchvision
+    #- PIL
+    - Pillow
