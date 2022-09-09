@@ -22,11 +22,15 @@ dependencies:
     - requests
     - torch
     - torchvision
-    #- PIL
     - Pillow
-    #- fairscale==0.4.4\n",
-    - -e git+https://github.com/openai/CLIP.git@main#egg=CLIP
+    - fairscale==0.4.4
+    - -e git+https://github.com/openai/CLIP.git@main#egg=clip
     #- -e https://github.com/pharmapsychotic/clip-interrogator.git
     #- -e git+https://github.com/salesforce/BLIP@main#egg=BLIP
+    #- -e git+https://github.com/fragmede/BLIP@hack#egg=blip
+    - -e ../BLIP/
+    - -e .
+
 variables:
   CARGO_NET_GIT_FETCH_WITH_CLI: 1
+  PYTORCH_ENABLE_MPS_FALLBACK: 1
